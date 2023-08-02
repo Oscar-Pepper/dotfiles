@@ -1,0 +1,23 @@
+theme = "dracula"
+
+[editor]
+scrolloff = 10
+completion-replace = true
+auto-pairs = true
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.indent-guides]
+render = true
+character = "╎"
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal]
+g = { w = "jump_backward" }
+L = ":toggle lsp.display-inlay-hints"

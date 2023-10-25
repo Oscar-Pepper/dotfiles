@@ -90,7 +90,7 @@ fi
 # some more ls aliases
 #alias ll='ls -l'
 #alias la='ls -A'
-#alias l='ls -CF'
+alias l='ls -la'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like

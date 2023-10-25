@@ -6,5 +6,7 @@
 	defaultBranch = main
 [merge]
 	conflictStyle = diff3
+[push]
+	gpgsign = true
 [gpg]
-	program = gpg2
+	program = /usr/bin/gpg2

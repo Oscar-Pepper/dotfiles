@@ -3,7 +3,6 @@
 .config/Google
 .config/gtk-3.0
 .config/helix/runtime
-.config/leftwm/themes
 .config/mimeapps.list
 .config/Signal
 .config/user-dirs.dirs

@@ -156,7 +156,8 @@ export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
 
-export GPG_TTY=$(tty)
+GPG_TTY=$(tty)
+export GPG_TTY
 
 export PATH=$PATH:$HOME/src/kotlin-language-server/server/build/install/server/bin
 

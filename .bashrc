@@ -158,6 +158,8 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
 
 GPG_TTY=$(tty)
 export GPG_TTY
+export GPG_AGENT_INFO
+export SSH_AUTH_SOCK
 
 export PATH=$PATH:$HOME/src/kotlin-language-server/server/build/install/server/bin
 

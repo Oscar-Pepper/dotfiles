@@ -1,9 +1,3 @@
-[user]
-	email = oscarpepper@zingolabs.org
-	name = Oscar Pepper
-	signingkey = 7092F5412F9C4CE5
-[commit]
-	gpgsign = true
 [core]
 	editor = hx
 [init]

@@ -156,10 +156,10 @@ export SSH_AUTH_SOCK
 source ~/.bash_completion/alacritty
 
 # Android SDK
-export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_HOME="$HOME/Android/Sdk"
 
 # Java
-export JAVA_HOME=/usr/lib/jvm/jdk-18.0.2
+export JAVA_HOME="/usr/lib/jvm/jdk-18.0.2"
 
 # Open zellij
 if [[ -v XDG_CURRENT_DESKTOP && ! -v ZELLIJ ]]; then

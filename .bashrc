@@ -87,11 +87,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-alias l='ls -la'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -112,10 +107,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. "$HOME/.cargo/env"
-
-source ~/.bash_completion/alacritty
-
+# Custom prompt
 function GITBRANCH {
     if [[ `git branch 2>&1` == *"not a git repository"* ]]
     then
@@ -132,7 +124,6 @@ function GITBRANCH {
         unset -f
     fi
 }
-       
 function custom_prompt {
     RC=$?
     DATE='\033[0;34m\t\033[0m '
@@ -151,18 +142,26 @@ function custom_prompt {
     PS1=$DATE$USER$HOST$BRANCH'\n'$DIR$EXIT_STATUS'\n$ '
 }
 export PROMPT_COMMAND=custom_prompt
-        
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
 
+# GPG
 GPG_TTY=$(tty)
 export GPG_TTY
 export GPG_AGENT_INFO
 export SSH_AUTH_SOCK
 
-export PATH=$PATH:$HOME/src/kotlin-language-server/server/build/install/server/bin
+# Cargo
+. "$HOME/.cargo/env"
 
+# Alacritty
+source ~/.bash_completion/alacritty
+
+# Android SDK
+export ANDROID_HOME=$HOME/Android/Sdk
+
+# Java
 export JAVA_HOME=/usr/lib/jvm/jdk-18.0.2
-export PATH=$PATH:$JAVA_HOME/bin
 
+# Open zellij
+if [[ -v XDG_CURRENT_DESKTOP && ! -v ZELLIJ ]]; then
+  zellij
+fi

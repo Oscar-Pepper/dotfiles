@@ -161,6 +161,13 @@ export ANDROID_HOME="$HOME/Android/Sdk"
 # Java
 export JAVA_HOME="/usr/lib/jvm/jdk-18.0.2"
 
+# Go root
+export GOROOT="$HOME/go"
+export GOPATH="$HOME/go"
+
+# Zaino test binaries
+export TEST_BINARIES_DIR="$HOME/src/zaino/test_binaries/bins"
+
 # Open zellij
 if [[ -v XDG_CURRENT_DESKTOP && ! -v ZELLIJ ]]; then
   zellij

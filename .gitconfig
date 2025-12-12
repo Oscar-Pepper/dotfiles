@@ -8,3 +8,7 @@
 	conflictStyle = diff3
 [gpg]
 	program = gpg2
+[user]
+	signingkey = 989325947F8FC97B
+	email = oscar.pepper1@gmail.com
+	name = Oscar Pepper
